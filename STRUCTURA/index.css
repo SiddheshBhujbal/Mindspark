@@ -22,7 +22,7 @@ body {
   position: absolute;
   height: 100%;
   width: 60%;
-  top: 50%;
+  top: 55%;
   left: 70%;
   display: flex;
   align-items: center;
@@ -104,14 +104,15 @@ body {
   }
 
   .container {
-    display: inline-block;
+    /* display: inline-block; */
+    left: 63%;
   }
 
   .card {
     /* position: relative; */
     margin-top: 40px;
     top: 10%;
-    left: 60%;
+    left: 130px;
     transform: translateX(-50%);
   }
 
@@ -123,9 +124,14 @@ body {
     transform: translateX(-150px);
     transition: 0.4s ease-in;
   }
+
 }
 
 @media (min-width: 900px) {
+  .container{
+    left: 70%;
+  }
+
   .container .card:not(:first-child) {
     margin-left: -50px;
   }
@@ -143,7 +149,7 @@ body {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 700px) {
   body {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -151,12 +157,14 @@ body {
 
   .container {
     display: inline-block;
+    left: 80%;
+    top: 65%;
   }
 
   .card {
     /* position: relative; */
     top: 10%;
-    left: 80%;
+    left: 200px;
     transform: translateX(-50%);
     border: 1px solid #fff;
   }
@@ -166,14 +174,19 @@ body {
   }
 
   .card:hover {
-    transform: translateX(-150px);
+    transform: translateX(-120px);
     transition: 0.4s ease-in;
   }
 
-  .card:nth-of-type(5) {
-    margin-bottom: 200px;
+}
+
+@media (max-width: 400px){
+  .container{
+    left: 61%;
   }
 }
+
+
 
 .title {
   color: white;
@@ -511,12 +524,6 @@ button.learn-more .button-text a {
   }
 }
 
-@media (max-width: 1140px) and (min-width: 900px){
-  .container{
-    position: absolute;
-    left: 48%;
-  }
-}
 
 .pattern {
   z-index: -2;
